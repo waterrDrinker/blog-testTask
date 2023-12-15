@@ -1,0 +1,40 @@
+@use './utils/functions' as f;
+
+:root {
+  --primary-color: #232E52;
+  --secondary-color: #FFFFFF;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-weight: 500;
+  font-size: f.rem(18);
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: f.rem(36);
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: f.rem(19);
+}
+
+.container {
+  max-width: f.rem(970);
+  margin: 0 auto;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  column-gap: f.rem(15);
+  width: max-content;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: f.rem(15) f.rem(20);
+  border-radius: f.rem(10);
+}

@@ -1,0 +1,9 @@
+@use '../utils/functions' as f;
+
+h2 {
+  font-size: f.rem(36);
+  // color: var(--primary-color);
+  color: red;
+  font-weight: 700;
+  margin-bottom: f.rem(19);
+}

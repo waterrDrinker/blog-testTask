@@ -1,0 +1,30 @@
+@use '../utils/functions' as f;
+
+.header {
+  max-width: 100%;
+  background-color: var(--primary-color);
+  border-radius: f.rem(10);
+  padding: 0 f.rem(80);
+  margin: 0 f.rem(30);
+  margin-top: f.rem(30);
+  margin-bottom: f.rem(100);
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      padding: f.rem(51) 0;
+    }
+
+    .login-btn {
+      font-size: f.rem(14);
+      color: var(--secondary-color);
+      border-radius: f.rem(8);
+      text-decoration: none;
+      background-color: #394263;
+      padding: f.rem(10) f.rem(20);
+    }
+  }
+}

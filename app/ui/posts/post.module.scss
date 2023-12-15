@@ -1,0 +1,20 @@
+@use '@/app/utils/functions' as f;
+
+.post {
+  border-top: 1px solid #EBF2FE;
+  display: flex;
+  column-gap: f.rem(60);
+  align-items: center;
+  padding: f.rem(40) 0;
+
+  h3 {
+    font-size: f.rem(28);
+    font-weight: 700;
+    margin-bottom: f.rem(12);
+  }
+  
+  p {
+    font-weight: 400;
+    margin-bottom: f.rem(35);
+  }
+}

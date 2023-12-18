@@ -1,4 +1,3 @@
-import { fetchPosts } from "@/app/lib/data";
 import Post from "./post";
 
 type Post = {
@@ -8,16 +7,27 @@ type Post = {
   userId: number;
 };
 
-const PostsList = async () => {
-  const posts = await fetchPosts();
-  const renderedPosts = posts
-    .reverse()
-    .slice(0, 5)
-    .map((post: Post) => (
-      <Post title={post.title} body={post.body} id={post.id} key={post.id} />
-    ));
+const PostsList = ({
+  posts,
+  currentPage,
+}: {
+  posts: Post[];
+  currentPage: number;
+}) => {
+  let renderedPosts = posts.reverse();
+  if (currentPage === 1) {
+    renderedPosts = renderedPosts.slice(0, 5);
+  } else {
+    renderedPosts = renderedPosts.slice((currentPage - 1) * 5, currentPage * 5);
+  }
 
-  return <>{renderedPosts}</>;
+  return (
+    <>
+      {renderedPosts.map((post: Post) => (
+        <Post title={post.title} body={post.body} id={post.id} key={post.id} />
+      ))}
+    </>
+  );
 };
 
 export default PostsList;

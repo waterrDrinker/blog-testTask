@@ -1,0 +1,72 @@
+@use '@/app/utils/functions' as f;
+
+.wrapper { 
+  display: flex;
+  justify-content: center;
+  margin-bottom: f.rem(75);
+
+  a {
+    text-decoration: none;
+  }
+  
+  .page-navigation {
+    display: flex;
+    margin-left: -1px;
+
+    .number-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: f.rem(40);
+      height: f.rem(40);
+      border: f.rem(1) solid rgb(229, 231, 235);
+      color: black;
+      font-size: f.rem(14);
+    }
+
+    .number-btn-active {
+      z-index: 10;
+      background-color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      color: var(--secondary-color);
+    }
+
+    .btn-rounded-left {
+      border-radius: f.rem(6) 0 0 f.rem(6);
+    }
+
+    .btn-rounded-right {
+      border-radius: 0 f.rem(6) f.rem(6) 0;
+    }
+  }
+  
+  .arrow-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: f.rem(1) solid rgb(229, 231, 235);
+    border-radius: f.rem(6);
+    height: f.rem(40);
+    width: f.rem(40);
+  }
+
+  .arrow-btn_disabled {
+    pointer-events: none;
+    color: rgb(209 213 219);
+  }
+
+  .arrow-btn:hover {
+    background-color: rgb(243 244 246);
+  }
+  .arrow-btn-right {
+    margin-left: f.rem(16);
+  }
+  .arrow-btn-left {
+    margin-right: f.rem(16);
+  }
+
+  .arrow-width {
+    width: f.rem(16);
+  }
+}

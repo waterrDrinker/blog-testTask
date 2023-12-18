@@ -18,3 +18,7 @@
     margin-bottom: f.rem(35);
   }
 }
+
+.post:nth-last-child(2) {
+  margin-bottom: f.rem(75);
+}

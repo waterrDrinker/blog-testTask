@@ -38,3 +38,19 @@ h2 {
   padding: f.rem(15) f.rem(20);
   border-radius: f.rem(10);
 }
+
+.flex {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.m-auto {
+  margin: 0 auto;
+}

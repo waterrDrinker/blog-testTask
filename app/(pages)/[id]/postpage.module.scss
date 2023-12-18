@@ -1,0 +1,8 @@
+@use '@/app/utils/functions' as f;
+
+.post-page {
+  height: calc(100vh - f.rem(425));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
